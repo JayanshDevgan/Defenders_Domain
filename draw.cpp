@@ -14,18 +14,18 @@ void Draw::grid(int GRID_SIZE, std::string tower_names[], int active_tower, int 
         else {
             if (i % 2 != 0) {
                 if (!tower_names[name_index].empty()) {
-                    if (name_index == selection_tower && !(is_place_mode_active)) {
-                        std::cout << "\t\t\t\033[34m" << tower_names[name_index] << "\t\t\t\t\033[37m";
-                        name_index++;
-                    }
-                    else if (name_index == active_tower) {
-                        std::cout << "\t\t\t\033[32m" << tower_names[name_index] << "\t\t\t\t\033[37m";
-                        name_index++;
-                    }
-                    else {
-                        std::cout << "\t\t\t" << tower_names[name_index] << "\t\t\t\t";
-                        name_index++;
-                    }
+                  if (name_index == selection_tower && !(is_place_mode_active)) {
+                      std::cout << "\t\t\t\033[34m" << tower_names[name_index] << "\t\t\t\t\033[37m";
+                      name_index++;
+                  }
+                  else if (name_index == active_tower) {
+                      std::cout << "\t\t\t\033[32m" << tower_names[name_index] << "\t\t\t\t\033[37m";
+                      name_index++;
+                  }
+                  else {
+                      std::cout << "\t\t\t" << tower_names[name_index] << "\t\t\t\t";
+                      name_index++;
+                  }
                 }
                 else {
                     std::cout << "\t\t\t\t\t\t\t\t";
@@ -87,5 +87,5 @@ void Draw::bottom_grid(int i, int GRID_SIZE, bool is_place_mode_active, int acti
 }
 
 void Draw::grid_tower_names(int name_index, int selection_tower, int active_tower, bool is_place_mode_active, std::string tower_names[]) {
-    // Implement your logic here
+    // Implement your logic here   
 }
