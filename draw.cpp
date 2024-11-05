@@ -54,7 +54,7 @@ void Draw::top_grid(int i, int GRID_SIZE, bool is_place_mode_active, int active_
     if (i % 2 != 0) {
         for (int j = 0; j <= 2 * GRID_SIZE; j++) {
             if (j % 2 == 0) {
-                (is_place_mode_active && i / 2 == active_grid_y && j / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_WALL_Y << "\033[37m" : std::cout << BORDER_WALL_Y;
+                (is_place_mode_active && j / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_WALL_Y << "\033[37m" : std::cout << BORDER_WALL_Y;
             }
             else {
                 std::cout << EMPTY;
@@ -64,7 +64,7 @@ void Draw::top_grid(int i, int GRID_SIZE, bool is_place_mode_active, int active_
     else {
         for (int j = 0; j <= 2 * GRID_SIZE; j++) {
             if (j % 2 == 0) {
-                (is_place_mode_active && i / 2 == active_grid_y && j / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_CORNER << "\033[37m" : std::cout << BORDER_CORNER;
+                (is_place_mode_active && j / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_CORNER << "\033[37m" : std::cout << BORDER_CORNER;
             }
             else {
                 (is_place_mode_active && i / 2 == active_grid_y) ? std::cout << "\033[31m" << BORDER_WALL_X << "\033[37m" : std::cout << BORDER_WALL_X;
@@ -78,14 +78,11 @@ void Draw::bottom_grid(int i, int GRID_SIZE, bool is_place_mode_active, int acti
 
     for (int j = 0; j <= 2 * GRID_SIZE; j++) {
         if (j % 2 == 0) {
-            (is_place_mode_active && j / 2 == active_grid_x && i / 2 == active_grid_y) ? std::cout << "\033[31m" << BORDER_CORNER << "\033[37m" : std::cout << BORDER_CORNER;
+            (is_place_mode_active && j / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_CORNER << "\033[37m" : std::cout << BORDER_CORNER;
         }
         else {
-            (is_place_mode_active && i / 2 == active_grid_x) ? std::cout << "\033[31m" << BORDER_WALL_X << "\033[37m" : std::cout << BORDER_WALL_X;
+            (is_place_mode_active && i / 2 == active_grid_y) ? std::cout << "\033[31m" << BORDER_WALL_X << "\033[37m" : std::cout << BORDER_WALL_X;
         }
     }
 }
 
-void Draw::grid_tower_names(int name_index, int selection_tower, int active_tower, bool is_place_mode_active, std::string tower_names[]) {
-    // Implement your logic here   
-}
