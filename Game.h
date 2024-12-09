@@ -116,8 +116,8 @@ public:
   std::tuple<int, int> calculate_grid();
   void calculate_tower_positions(int GRID_SIZE, int active_tower, int active_grid_x, int active_grid_y, TowerPositionData& TowerPosition);
   void display_tower_positions(const TowerPositionData& TowerPosition);
-  int Game:: calculate_enemy_tower_distance(TowerPositionDataClass& tower,Enemy& enemy );
-  void Game:: shoot_bullets(TowerPositionDataClass& tower,Enemy& enemy);
+  int calculate_enemy_tower_distance(TowerPositionDataClass& tower,Enemy& enemy );
+  void shoot_bullets(TowerPositionDataClass& tower,Enemy& enemy);
 
 private:
   std::vector<TowerPositionDataClass> placed_towers_list;
