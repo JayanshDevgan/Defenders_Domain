@@ -88,7 +88,7 @@ namespace GameConstants {
     constexpr const char BORDER_CORNER     = '+';
     constexpr const char BORDER_WALL_Y     = '|';
     constexpr const char* BORDER_WALL_X    = "-----";
-    constexpr const char* DOOR             = "[( . )]";
+    constexpr const char* DOOR             = "[(.)]";
 
     const int UPGRADE_TIMES[7][5] = {
                                       {200, 350, 450, 500, 700}, // Electric Tower
