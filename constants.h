@@ -83,6 +83,8 @@ namespace GameConstants {
 
     )";
 
+    constexpr const int RANGE              = 10;
+
     constexpr const int MAX_ENEMIES        = 90;
     constexpr const char* EMPTY            = "     ";
     constexpr const char BORDER_CORNER     = '+';

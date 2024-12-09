@@ -25,10 +25,11 @@ To compile the program, you need to have a C++ compiler installed on your system
 ### Windows
 Open your command prompt and run the following command:
 ```bash GCC
-g++ main.cpp game.cpp draw.cpp -o PTD.exe -lwinmm```
-
-### Using MSVC
+g++ main.cpp game.cpp draw.cpp -o PTD.exe -lwinmm
 ```
+
+
+```MSVC
 cl main.cpp Game.cpp draw.cpp /FePTD.exe /link winmm.lib
 ```
 
